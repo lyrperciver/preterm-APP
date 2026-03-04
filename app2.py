@@ -81,15 +81,25 @@ TEXT = {
     "done_n": {"zh": "预测完成：{n} 条", "en": "Done: {n} rows"},
 }
 
-# =============== 2) 语言选择 ===============
+# =============== 2) 语言选择 + 左侧疾病按钮 ===============
 st.set_page_config(page_title="PBI Risk Prediction · Prototype", layout="centered")
 
-lang_choice = st.sidebar.radio(
-    f'{TEXT["lang_label"]["zh"]} / {TEXT["lang_label"]["en"]}',
-    ["中文", "English"],
-    index=0,
-    horizontal=True,
-)
+with st.sidebar:
+    lang_choice = st.radio(
+        f'{TEXT["lang_label"]["zh"]} / {TEXT["lang_label"]["en"]}',
+        ["中文", "English"],
+        index=0,
+        horizontal=True,
+    )
+
+    st.markdown("---")
+    st.markdown("### 疾病模型 / Disease Models")
+
+    st.button("早产儿脑损伤（PBI）", use_container_width=True, key="btn_pbi")
+    st.button("新生儿坏死性小肠结肠炎（NEC）", use_container_width=True, key="btn_nec")
+    st.button("支气管肺发育不良（BPD）", use_container_width=True, key="btn_bpd")
+    st.button("新生儿胆汁淤积症", use_container_width=True, key="btn_cholestasis")
+
 LANG = "zh" if lang_choice == "中文" else "en"
 st.title(TEXT["title"][LANG])
 st.caption(TEXT["caption"][LANG])

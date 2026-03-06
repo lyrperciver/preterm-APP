@@ -91,43 +91,43 @@ st.markdown(
     html, body, [class*="css"]  { font-size: 22px !important; }
 
     /* 2) 标题/小标题加粗并放大（st.title / markdown ### 等） */
-    h1 { font-size: 34px !important; font-weight: 800 !important; }
-    h2 { font-size: 26px !important; font-weight: 800 !important; }
-    h3 { font-size: 20px !important; font-weight: 800 !important; }
+    h1 { font-size: 40px !important; font-weight: 800 !important; }
+    h2 { font-size: 30px !important; font-weight: 800 !important; }
+    h3 { font-size: 26px !important; font-weight: 800 !important; }
 
     /* 3) 正文段落、列表更清晰 */
     div[data-testid="stMarkdownContainer"] p,
     div[data-testid="stMarkdownContainer"] li {
-        font-size: 18px !important;
+        font-size: 22px !important;
         font-weight: 600 !important;
     }
 
     /* 4) 侧边栏整体字号（含 radio、markdown、按钮） */
     div[data-testid="stSidebar"] * {
-        font-size: 17px !important;
+        font-size: 22px !important;
         font-weight: 650 !important;
     }
 
     /* 5) 按钮更醒目 */
     div.stButton > button {
-        font-size: 17px !important;
+        font-size: 22px !important;
         font-weight: 800 !important;
         padding: 0.60rem 0.90rem !important;
     }
 
     /* 6) 表单输入项的“标签”加粗（number_input / selectbox 等） */
     label, .stRadio label, .stSelectbox label, .stNumberInput label {
-        font-size: 17px !important;
+        font-size: 22px !important;
         font-weight: 800 !important;
     }
 
     /* 7) metric 更大更粗（预测概率那块会更显眼） */
     div[data-testid="stMetricLabel"] {
-        font-size: 16px !important;
+        font-size: 22px !important;
         font-weight: 800 !important;
     }
     div[data-testid="stMetricValue"] {
-        font-size: 30px !important;
+        font-size: 40px !important;
         font-weight: 900 !important;
     }
     </style>

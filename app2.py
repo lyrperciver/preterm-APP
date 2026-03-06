@@ -88,7 +88,7 @@ st.markdown(
     """
     <style>
     /* 1) 全局基础字号（会影响正文、表单、说明文字等） */
-    html, body, [class*="css"]  { font-size: 18px !important; }
+    html, body, [class*="css"]  { font-size: 22px !important; }
 
     /* 2) 标题/小标题加粗并放大（st.title / markdown ### 等） */
     h1 { font-size: 34px !important; font-weight: 800 !important; }
